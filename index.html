@@ -63,6 +63,7 @@
               <img src="mediafolder/marcus3.png" alt="Third image of set 1">
             </div>
           </div>
+          <h3 class="gallery-title">Marcus Aurelius</h3>
           <div class="description-container">
             <p class="description"> Marcus Aurelius (121–180 CE) was Roman emperor from 161 to 180 CE, remembered as a philosopher-king and the last of the “Five Good Emperors” who guided the empire through a long period of peace and prosperity. Born Marcus Annius Verus into a prominent Roman family, he was adopted by his aunt’s husband, the future emperor Antoninus Pius, at the behest of Emperor Hadrian. Marcus received an extensive education in rhetoric and law but was particularly drawn to Stoic philosophy, especially the teachings of Epictetus. He became emperor in 161 CE, ruling jointly with his adoptive brother Lucius Verus. Their reign faced significant challenges, including wars, plagues, and rebellions. Despite these hardships, Marcus is celebrated for his just and compassionate rule, his dedication to duty, and his philosophical approach to leadership. Together, Marcus and Lucius Verus contended with wars against the Parthians and Germanic tribes. After Lucius Verus's death in 169 CE, Marcus ruled alone, spending much of his remaining years campaigning along the empire’s frontiers, particularly near the Danube River. He also quelled a rebellion led by Avidius Cassius, the governor of Syria. A devoted Stoic philosopher, Marcus Aurelius found solace and guidance in the principles of Stoicism. He is best known for *Meditations*, a collection of personal reflections that explore the application of Stoic philosophy to life. These writings reveal his inner thoughts, his commitment to virtue, and his desire to live in harmony with nature and reason. Marcus died in 180 CE, likely from the Antonine Plague, and appointed his son Commodus as his successor. This decision has been widely criticized, as Commodus's reign was marked by tyranny and excess, starkly contrasting his father’s virtuous rule. Nonetheless, Marcus Aurelius remains an enduring symbol of wisdom, virtue, and philosophical leadership. He also had a keen interest in law, enacting reforms to protect the vulnerable and promote justice. In his personal life, Marcus enjoyed the stage, fishing, hunting, and spending time with friends. His life serves as an example of how to lead with virtue and find meaning amid life’s challenges, inspiring many throughout history.  </p>
           </div>
@@ -79,6 +80,7 @@
               <img src="mediafolder/anto3.png" alt="Third image of set 2">
             </div>
           </div>
+          <h3 class="gallery-title">Antoninus Pius</h3>
           <div class="description-container">
             <p class="description">Antoninus Pius (86–161 CE) became Roman emperor in 138 CE after being adopted by his predecessor, Hadrian. His 23-year reign is remembered for its peace and prosperity, earning him a place among the "Five Good Emperors" of Rome. Born into a prominent family with a tradition of political service, Antoninus was respected from an early age and inherited significant wealth. He held various government positions, including quaestor, praetor, and consul, and gained further distinction as a proconsul of Asia, where his capable administration enhanced his reputation. Several omens reportedly foretold his future rule, such as a priestess mistakenly calling him "imperator" and a crown mysteriously moving from a god’s statue to him. Although Hadrian initially selected other heirs, their premature deaths led him to adopt Antoninus as his son and successor, on the condition that Antoninus, in turn, adopt Marcus Aurelius and Lucius Verus to ensure the dynasty’s continuity.
 
@@ -103,6 +105,7 @@
                 <img src="mediafolder/alex3.png" alt="Third image of set 3">
             </div>
           </div>
+          <h3 class="gallery-title">Alexander the Great</h3>
           <div class="description-container">
             <p class="description">Born in Pella, Macedonia, in 356 BCE, Alexander was a precocious child groomed for greatness from a young age. His education, guided by figures like Aristotle, instilled in him a love for learning, science, philosophy, and the arts. At 18, his military talent emerged on the battlefield, foreshadowing his future conquests.
               Ascending to the throne at 20 after his father's assassination, Alexander swiftly embarked on a campaign to conquer the Persian Empire. He swept across Asia Minor, Egypt, and Persia, winning decisive victories at Granicus River, Issus, and Gaugamela, becoming the undisputed King of Asia. He marched eastward, expanding his empire into Afghanistan and parts of India, driven by ambition and a thirst for exploration.
@@ -117,20 +120,68 @@
     <!-- 3D Model Viewer Section -->
     <section class="model-viewer">
       <h2>3D Model Viewer</h2>
+      
+      <!-- First Model -->
       <div class="viewer-container">
         <model-viewer
-          src="mediafolder/alexander/scene.gltf"
-          alt="3D model"
+          src="mediafolder/Alexander/scene.gltf"
+          alt="3D model of Alexander"
           auto-rotate
           camera-controls
           shadow-intensity="1"
           exposure="1"
-          style="width: 100%; height: 500px;">
+          style="width: 100%; height: 500px;"
+          onload="this.nextElementSibling.style.display='none';"
+          onerror="this.nextElementSibling.style.display='none';">
         </model-viewer>
+        <img src="mediafolder/loadingimage.jpg" alt="Loading..." class="loading" style="display: block;">
+        <div class="qr-container">
+          <img src="mediafolder/alexanderQRCode.png" alt="AR QR Code" class="qr-code">
+          <p class="qr-text">Scan this QR code to view Alexander in AR</p>
+        </div>
+      </div>
+
+      <!-- Second Model -->
+      <div class="viewer-container">
+        <model-viewer
+          src="mediafolder/Marcus/scene.gltf"
+          alt="3D model of Marcus Aurelius"
+          auto-rotate
+          camera-controls
+          shadow-intensity="1"
+          exposure="1"
+          style="width: 100%; height: 500px;"
+          onload="this.nextElementSibling.style.display='none';"
+          onerror="this.nextElementSibling.style.display='none';">
+        </model-viewer>
+        <img src="mediafolder/loadingimage.jpg" alt="Loading..." class="loading" style="display: block;">
+        <div class="qr-container">
+          <img src="mediafolder/marcusQRCode.png" alt="AR QR Code" class="qr-code">
+          <p class="qr-text">Scan this QR code to view Marcus Aurelius in AR</p>
+        </div>
+      </div>
+
+      <!-- Third Model -->
+      <div class="viewer-container">
+        <model-viewer
+          src="mediafolder/Pious/scene.gltf"
+          alt="3D model of Antoninus Pius"
+          auto-rotate
+          camera-controls
+          shadow-intensity="0.3"
+          exposure="0.3"
+          style="width: 100%; height: 500px;"
+          onload="this.nextElementSibling.style.display='none';"
+          onerror="this.nextElementSibling.style.display='none';">
+        </model-viewer>
+        <img src="mediafolder/loadingimage.jpg" alt="Loading..." class="loading" style="display: block;">
+        <div class="qr-container">
+          <img src="mediafolder/PiusQR Code.png" alt="AR QR Code" class="qr-code">
+          <p class="qr-text">Scan this QR code to view Antoninus Pius in AR</p>
+        </div>
       </div>
     </section>
   </main>
-
   <footer>
     <div class="footer-content">
       <!-- Contact Info -->

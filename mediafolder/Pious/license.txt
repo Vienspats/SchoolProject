@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bust of Antoninus Pious
+* source:	https://sketchfab.com/3d-models/bust-of-antoninus-pious-315879cb7d7642f3880a1210862f5938
+* author:	CaptainObvious (https://sketchfab.com/CaptainObvious)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bust of Antoninus Pious" (https://sketchfab.com/3d-models/bust-of-antoninus-pious-315879cb7d7642f3880a1210862f5938) by CaptainObvious (https://sketchfab.com/CaptainObvious) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

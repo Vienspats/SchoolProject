@@ -438,14 +438,231 @@ body {
     backdrop-filter: blur(5px);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
+    padding: 4rem;
     margin: 2rem auto;
     max-width: 1200px;
+    margin-bottom: 40px; /* Add space below each viewer container */
   }
   
   model-viewer {
     width: 100%;
     height: 500px;
     background-color: transparent;
+  }
+  
+  /* Base responsive layout */
+  .viewer-container, .carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive text content */
+  .text-content {
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Gallery layout */
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .image-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .image-set img {
+    flex: 1;
+    min-width: 250px;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Gallery titles */
+  .gallery-title {
+    font-size: 42px;
+    line-height: 1.2;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin: 30px auto;
+    padding: 10px 0;
+    width: fit-content;
+  }
+  
+  .gallery-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #333;
+    margin: 10px auto 0;
+  }
+  
+  /* Description container */
+  .description-container {
+    width: 100%;
+    text-align: left;
+  }
+  
+  /* QR Code Container */
+  .qr-container {
+    width: 250px;
+    height: auto;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .qr-code {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+  }
+  
+  /* QR Code Text */
+  .qr-text {
+    width: 100%;
+    font-size: 20px;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+  
+  /* Footer layout */
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    #navbar ul {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .hero-section {
+      flex-direction: column;
+    }
+    
+    model-viewer {
+      height: 300px !important;
+    }
+    
+    /* Consolidate QR code styles */
+    .qr-container {
+      width: 200px; /* Changed from 80px to maintain better visibility */
+    }
+    
+    .qr-code {
+      max-width: 100%;
+    }
+    
+    .qr-text {
+      font-size: 16px;
+    }
+    
+    .description-container {
+      padding: 15px;
+    }
+    
+    .gallery-title {
+      font-size: 36px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    .description { font-size: 14px; }
+    model-viewer { height: 250px !important; }
+  }
+  
+  /* Transitions */
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  
+  .loading {
+    display: block;
+    margin: 0 auto; /* Center the loading image */
+    width: 50px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Base container styles */
+  .container {
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    margin: 2rem auto;
+  }
+  
+  /* Specific container modifications */
+  .viewer-container {
+    /* Inherit base container styles */
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Specific modifications */
+    padding: 4rem;
+    max-width: 1200px;
+    margin-bottom: 40px;
+  }
+  
+  .text-container {
+    /* Inherit base container styles */
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Specific modifications */
+    max-width: 800px;
+  }
+  
+  /* Base section styles */
+  .section {
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 100%;
+  }
+  
+  /* Section variants */
+  .section--wide {
+    max-width: 1200px;
+  }
+  
+  .section--narrow {
+    max-width: 800px;
   }
   
